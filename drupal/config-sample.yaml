@@ -1,0 +1,3 @@
+project_name: 'myproject'
+config_directory: '/Users/myUser/Sites/myproject.com/config'
+languages_folder: '/Users/myUser/Sites/myproject.com/config/languages'
