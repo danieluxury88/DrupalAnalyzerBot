@@ -1,3 +1,12 @@
-project_name: 'fulterer'
-config_directory: '/Users/daniel/Sites/fulterer.com/config'
-languages_folder: '/Users/daniel/Sites/fulterer.com/config/languages'
+current_project: 'fulterer'
+
+projects:
+  fulterer:
+    project_name: 'fulterer'
+    config_directory: '/Users/daniel/Sites/fulterer.com/config'
+    languages_directory: '/Users/daniel/Sites/fulterer.com/config/language'
+
+  vpack:
+    project_name: 'vpack'
+    config_directory: '/Users/daniel/Sites/vpack/config/sync'
+    languages_directory: '/Users/daniel/Sites/vpack/config/sync/language'

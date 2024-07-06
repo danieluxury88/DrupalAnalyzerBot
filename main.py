@@ -9,18 +9,23 @@ from modules.sorting_utils import sort_data
 
 
 def main():
-    config = load_config('config.yaml')
+    config = load_config('drupal/config.yaml')
     if not config:
-        print("Failed to load configuration.")
         return
 
-    config_directory = config['config_directory']
-    languages_folder = config['languages_folder']
+    # Use the loaded configuration
+    print("Project Name:", config['project_name'])
+    print("Configuration Directory:", config['config_directory'])
+    print("Languages Directory:", config['languages_directory'])
+
     project_name = config['project_name']
+    config_directory = config['config_directory']
+    languages_directory = config['languages_directory']
+
 
     # Language Analysis
-    # languages_files = list_language_files(config_directory, languages_folder)
-    # print("Language files:", languages_files)
+    languages_files = list_language_files(languages_directory)
+    print("Language files:", languages_files)
 
     # Commerce Installation Check
     commerce_installed = is_commerce_installed(config_directory)
