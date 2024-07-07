@@ -1,3 +1,8 @@
-project_name: 'myproject'
-config_directory: '/Users/myUser/Sites/myproject.com/config'
-languages_folder: '/Users/myUser/Sites/myproject.com/config/languages'
+current_project: 'my_project'
+
+projects:
+  my_project:
+    project_name: 'my_project'
+    config_directory: '/Users/daniel/Sites/my_project.com/config'
+    languages_directory: '/Users/daniel/Sites/my_project.com/config/language'
+

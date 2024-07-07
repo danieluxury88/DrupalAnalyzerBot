@@ -1,4 +1,6 @@
+
 import os
+import webbrowser
 
 def create_basic_html(title):
     """Create a basic HTML5 document."""
@@ -42,11 +44,18 @@ def finalize_html(html_content):
 
 
 def generate_modules_report(project_name, modules_list):
+    import os
+    import webbrowser  # Ensure this import is at the top of your script if not already
+
     # Create the "out" folder if it doesn't exist
-    os.makedirs("out", exist_ok=True)  # Using os.makedirs with exist_ok=True
+    os.makedirs("out", exist_ok=True)
 
     html_content = create_basic_html("Installed Modules Report")
     html_content += add_table_to_html(modules_list, ["Module Name"])
     html_content = finalize_html(html_content)
-    with open(f"out/{project_name}.html", "w") as file:
+    file_path = f"out/{project_name}.html"
+    with open(file_path, "w") as file:
         file.write(html_content)
+
+    # Open the HTML file in a web browser
+    webbrowser.open_new_tab(f'file://{os.path.realpath(file_path)}')
