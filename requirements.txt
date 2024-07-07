@@ -2,6 +2,8 @@ certifi==2023.7.22
 charset-normalizer==3.2.0
 greenlet==3.0.3
 idna==3.4
+Jinja2==3.1.4
+MarkupSafe==2.1.5
 playwright==1.45.0
 pyaml==24.4.0
 pyee==11.1.0

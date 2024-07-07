@@ -10,3 +10,16 @@ def sort_data(data, column_index=0, descending=False):
         list of tuple: Sorted data.
     """
     return sorted(data, key=lambda x: x[column_index], reverse=descending)
+
+def sort_list_alphabetically(input_list, descending=False):
+    """
+    Sort a list of strings alphabetically.
+
+    Args:
+        input_list (list of str): The list to be sorted.
+        descending (bool): Set to True for descending order, False for ascending order (default).
+
+    Returns:
+        list of str: The sorted list.
+    """
+    return sorted(input_list, reverse=descending)

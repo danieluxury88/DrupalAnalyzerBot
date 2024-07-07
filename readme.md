@@ -7,7 +7,8 @@ Drupal Project Analyzer
 - [ ] Fix Language reporter
 
 # Improvements (Refactoring)
-- [ ] Move 
+- [ ] Move commerce analyzer insider own folder/module.
+- [ ] Move field analyzer insider own module.
 - [ ] Consider using poetry
 
 # Pending Features/Todo
