@@ -1,5 +1,13 @@
 import os
 
+import os
+
+def is_directory_valid(config_directory):
+    if os.path.exists(config_directory):
+        return True
+    return False
+
+
 def list_installed_modules(config_directory):
     """List all unique modules based on the presence of configuration files."""
     modules = set()

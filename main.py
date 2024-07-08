@@ -1,9 +1,9 @@
 import datetime
+from drupal.overview_analyzer import list_installed_modules, is_directory_valid
 from modules.html_generator.html_generator import generate_modules_report
 from drupal.config_loader import load_config
 from drupal.language_analyzer import list_language_files
 from drupal.commerce_analyzer import commerce_analysis_controller
-from drupal.overview_analyzer import list_installed_modules
 from modules.utils.sorting_utils import sort_data
 
 
@@ -11,7 +11,7 @@ def main():
     config = load_config('drupal/config.yaml')
     if not config:
         return
-
+    
     # Use the loaded configuration
     print("Current Time", datetime.datetime.now())
     print("Project Name:", config['project_name'])
@@ -21,6 +21,10 @@ def main():
     project_name = config['project_name']
     config_directory = config['config_directory']
     languages_directory = config['languages_directory']
+    
+    if not is_directory_valid(config_directory):
+        print("Project not found")
+        return
 
     # Overview of Installed Modules
     installed_modules = list_installed_modules(config_directory)
