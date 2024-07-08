@@ -1,7 +1,5 @@
 import os
 
-import os
-
 def is_directory_valid(config_directory):
     if os.path.exists(config_directory):
         return True
