@@ -3,8 +3,9 @@ from drupal.overview_analyzer import list_installed_modules, is_directory_valid
 from modules.html_generator.html_generator import generate_modules_report
 from modules.utils.sorting_utils import sort_data
 from drupal.config_loader import load_config
-from drupal.language_analyzer import list_language_files
+from drupal.language_analyzer import list_language_directories
 from drupal.commerce_analyzer import commerce_analysis_controller
+from drupal.field_analyzer.field_analyzer import fields_analysis_controller
 
 
 def main():
@@ -28,23 +29,22 @@ def main():
 
     # Overview of Installed Modules
     installed_modules = list_installed_modules(config_directory)
-    # print("Installed Modules:", installed_modules)
-
-    # Prepare data for HTML table
     installed_modules_data = [module for module in installed_modules]
     sorted_modules = sort_data(installed_modules_data, column_index=0, descending=False)
     # print("Sorted installed Modules:", sorted_modules)
 
-    # Generate HTML report
-    generate_modules_report(project_name, [sorted_modules, installed_modules])
-
-
     # # Language Analysis
-    # languages_files = list_language_files(languages_directory)
+    languages_files = list_language_directories(languages_directory)
     # print("Language files:", languages_files)
 
+    # Generate HTML report
+    generate_modules_report(project_name, [languages_files, sorted_modules, installed_modules])
+
+
+
     # # Commerce Installation Check
-    commerce_analysis_controller(config_directory)
+    # commerce_analysis_controller(config_directory)
+    fields_analysis_controller(config_directory)
 
 
 if __name__ == "__main__":
