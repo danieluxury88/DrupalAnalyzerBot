@@ -5,8 +5,10 @@ projects:
     project_name: 'fulterer'
     config_directory: '/Users/daniel/Sites/fulterer.com/config'
     languages_directory: '/Users/daniel/Sites/fulterer.com/config/language'
+    uml_report_output: '/Users/daniel/Sites/fulterer.com/docs/bot-report'
 
   vpack:
     project_name: 'vpack'
     config_directory: '/Users/daniel/Sites/vpack/config/sync'
     languages_directory: '/Users/daniel/Sites/vpack/config/sync/language'
+    uml_report_output: '/Users/daniel/Sites/vpack/docs/bot-report'

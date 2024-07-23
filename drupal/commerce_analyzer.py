@@ -190,12 +190,3 @@ def commerce_analysis_controller(config_directory):
 
     # dependencies = analyze_dependencies(commerce_files, config_directory)
     # print("Dependencies:", dependencies)
-
-
-
-
-
-# Example usage in another script or module
-if __name__ == "__main__":
-    config_directory = '/path/to/your/drupal/config/directory'
-    commerce_analysis_controller(config_directory)

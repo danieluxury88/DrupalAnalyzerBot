@@ -30,10 +30,16 @@ def load_config(config_file, project_name=None):
         print(f"Configuration file not found: {config_file}")
         return None
 
-# Example usage within this script for testing or initialization (remove if not needed)
-if __name__ == "__main__":
-    config = load_config('drupal/config.yaml', project_name='vpack')
-    if config:
-        print("Configuration loaded successfully:", config)
-    else:
-        print("Failed to load configuration.")
+
+def get_uml_report_output():
+    config = load_config('drupal/config.yaml')
+    if not config:
+        return None
+    return config.get('uml_report_output')
+
+
+def load_config_keys():
+    config = load_config('drupal/config.yaml')
+    if not config:
+        return None
+    return config

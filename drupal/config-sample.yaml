@@ -5,4 +5,5 @@ projects:
     project_name: 'my_project'
     config_directory: '/Users/daniel/Sites/my_project.com/config'
     languages_directory: '/Users/daniel/Sites/my_project.com/config/language'
+    uml_report_output: '/Users/daniel/Sites/my_project.com/docs/bot-report'
 
